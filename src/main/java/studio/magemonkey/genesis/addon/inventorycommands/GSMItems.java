@@ -63,11 +63,11 @@ public class GSMItems implements Reloadable {
     }
 
 
-    public void playerClicked(PlayerInteractEvent e, boolean allow_left_click) {
+    public void playerClicked(PlayerInteractEvent e, boolean allowLeftClick) {
         if (e.getItem() != null) {
-            boolean click_left  = e.getAction() == Action.LEFT_CLICK_AIR || e.getAction() == Action.LEFT_CLICK_BLOCK;
-            boolean click_right = e.getAction() == Action.RIGHT_CLICK_AIR || e.getAction() == Action.RIGHT_CLICK_BLOCK;
-            if (click_right || (click_left && allow_left_click)) {
+            boolean clickLeft  = e.getAction() == Action.LEFT_CLICK_AIR || e.getAction() == Action.LEFT_CLICK_BLOCK;
+            boolean clickRight = e.getAction() == Action.RIGHT_CLICK_AIR || e.getAction() == Action.RIGHT_CLICK_BLOCK;
+            if (clickRight || (clickLeft && allowLeftClick)) {
 
                 for (GSMItem item : items) {
                     if (item.playerClicked(plugin, e)) {

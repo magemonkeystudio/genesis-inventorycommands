@@ -109,13 +109,22 @@ public class PlayerListener implements Listener, Reloadable {
 
     @EventHandler
     public void onMove(InventoryClickEvent event) {
-        if (!this.move) {
-            event.getInventory();
-            if ((this.plugin.getGSMItems().isShopItem(event.getCurrentItem())) || (this.plugin.getGSMItems()
-                    .isShopItem(event.getCursor()))) {
-                event.setCancelled(true);
-                event.setResult(Result.DENY);
-            }
+        if (this.move) return;
+
+        if (this.plugin.getGSMItems().isShopItem(event.getCurrentItem())
+                || this.plugin.getGSMItems().isShopItem(event.getCursor())) {
+            event.setCancelled(true);
+            event.setResult(Result.DENY);
+        }
+    }
+
+    @EventHandler
+    public void swap(PlayerSwapHandItemsEvent event) {
+        if (this.move) return;
+
+        if (this.plugin.getGSMItems().isShopItem(event.getOffHandItem())
+                || this.plugin.getGSMItems().isShopItem(event.getMainHandItem())) {
+            event.setCancelled(true);
         }
     }
 
