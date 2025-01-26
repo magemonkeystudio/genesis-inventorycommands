@@ -8,7 +8,7 @@
     </parent>
 
     <artifactId>genesis-inventorycommands</artifactId>
-    <version>1.0.1-R0.2-SNAPSHOT</version>
+    <version>1.0.1-R0.3-SNAPSHOT</version>
     <name>Genesis-InventoryCommands</name>
     <description>Adds new ways to open a shop</description>
 
