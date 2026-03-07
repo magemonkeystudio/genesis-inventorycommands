@@ -1,7 +1,7 @@
 name: InventoryCommands
 version: ${project.version}
 description: Genesis Addon - Allows opening GUIs in new ways
-author: Black_ixx,MageMonkeyStudio
+author: Black_ixx,VoidEdge
 website: http://felix.neuby.de
 main: studio.magemonkey.genesis.addon.inventorycommands.InventoryCommands
 depend: [Genesis]
